@@ -1,0 +1,183 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:666527329346834457",
+      "lastPropertyId": "5:2083462431503190534",
+      "name": "ExclFee",
+      "properties": [
+        {
+          "id": "1:7545894885021471048",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:43109064030840952",
+          "name": "label",
+          "type": 9
+        },
+        {
+          "id": "3:5086742235578415318",
+          "name": "date",
+          "type": 10
+        },
+        {
+          "id": "4:5108151095415754544",
+          "name": "valid",
+          "type": 1
+        },
+        {
+          "id": "5:2083462431503190534",
+          "name": "price",
+          "type": 8
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:80096669195586224",
+      "lastPropertyId": "3:1890742470366143103",
+      "name": "FeeFile",
+      "properties": [
+        {
+          "id": "1:1724494222516686992",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:5359979957785263185",
+          "name": "created",
+          "type": 10
+        },
+        {
+          "id": "3:1890742470366143103",
+          "name": "edited",
+          "type": 10
+        }
+      ],
+      "relations": [
+        {
+          "id": "1:3765544193573741165",
+          "name": "incls",
+          "targetId": "3:4417547793415280261"
+        },
+        {
+          "id": "2:9147344117919616069",
+          "name": "excls",
+          "targetId": "1:666527329346834457"
+        }
+      ]
+    },
+    {
+      "id": "3:4417547793415280261",
+      "lastPropertyId": "6:3838900854098572514",
+      "name": "InclFee",
+      "properties": [
+        {
+          "id": "1:8396308933139088442",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "3:3845296302142270813",
+          "name": "qtt",
+          "type": 8
+        },
+        {
+          "id": "4:7643725864620769963",
+          "name": "date",
+          "type": 10
+        },
+        {
+          "id": "5:2986690875871064557",
+          "name": "valid",
+          "type": 1
+        },
+        {
+          "id": "6:3838900854098572514",
+          "name": "catId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "2:3570574217388908559",
+          "relationTarget": "InclFeeCatSubParent"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "4:2212680753863616015",
+      "lastPropertyId": "2:2999504017751234245",
+      "name": "InclFeeCatParent",
+      "properties": [
+        {
+          "id": "1:3505160592594309139",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:2999504017751234245",
+          "name": "name",
+          "type": 9
+        }
+      ],
+      "relations": [
+        {
+          "id": "3:8367154258601148559",
+          "name": "subs",
+          "targetId": "5:351448137506912629"
+        }
+      ]
+    },
+    {
+      "id": "5:351448137506912629",
+      "lastPropertyId": "4:849039291354334714",
+      "name": "InclFeeCatSubParent",
+      "properties": [
+        {
+          "id": "1:1822271285776167551",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:4867574303198076419",
+          "name": "catId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "1:6180031007655616459",
+          "relationTarget": "InclFeeCatParent"
+        },
+        {
+          "id": "3:7638564842653945292",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "4:849039291354334714",
+          "name": "price",
+          "type": 8
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "5:351448137506912629",
+  "lastIndexId": "2:3570574217388908559",
+  "lastRelationId": "3:8367154258601148559",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [
+    6106237145696966782
+  ],
+  "retiredRelationUids": [],
+  "version": 1
+}
